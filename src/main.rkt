@@ -1,7 +1,6 @@
 #lang racket/base
 
 (require web-server/servlet-env)
-(require web-server/managers/lru)
 (require reloadable)
 (require "signals.rkt")
 
