@@ -7,6 +7,8 @@
 (require web-server/servlet)
 (require reloadable)
 
+(require "config.rkt")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Persistent state:
 
@@ -40,6 +42,7 @@
 (define (main-page req)
   (respond `(div
              (h1 "Example Reloadable Racket Website")
+             (p ,configurable-text)
              (p "The counter's current value is "
                 ,(number->string (counter))
                 ".")
